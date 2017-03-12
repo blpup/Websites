@@ -5,3 +5,4 @@ Technologies used:
 -JS
 -Bower
 -NPM
+-JQuery
