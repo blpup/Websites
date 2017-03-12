@@ -190,9 +190,13 @@ nav {
     display: inline-block; }
     nav ul li {
       display: inline-block; }
+      @media (max-width: 980px) {
+        nav ul li {
+          display: block;
+          width: 100%; } }
     @media (max-width: 980px) {
       nav ul {
-        display: none; } }
+        width: 100%; } }
   nav ul:first-child a {
     padding: 32px 15.5px;
     display: block;
@@ -203,22 +207,45 @@ nav {
     @media (max-width: 1150px) {
       nav ul:first-child a {
         padding: 32px 10.5px; } }
+    @media (max-width: 980px) {
+      nav ul:first-child a {
+        padding: 12px 0 12px 10px; } }
   nav ul:first-child a:hover {
     box-shadow: 0 5px #11749e; }
+  @media (max-width: 980px) {
+    nav ul:first-child {
+      padding-top: 55px; } }
   nav ul:last-child {
     padding-left: 10px; }
     nav ul:last-child a {
       padding: 0 10px; }
+    @media (max-width: 980px) {
+      nav ul:last-child {
+        padding-left: 0;
+        padding-top: 10px; } }
   nav span {
     display: none;
     width: 50px;
-    height: 19px;
-    padding-top: 43px; }
+    height: 32px;
+    margin-top: 29px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transtion: 0.3s ease; }
     nav span i {
       width: 50px;
       height: 4px;
       background-color: white;
-      display: block; }
+      display: block;
+      position: relative;
+      top: 14px;
+      transition: 0.3s ease;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      -o-transition: 0.3s ease;
+      -ms-transtion: 0.3s ease; }
       nav span i:before {
         content: "";
         width: 50px;
@@ -237,7 +264,37 @@ nav {
         display: block; }
     @media (max-width: 980px) {
       nav span {
-        display: inline-block; } }
+        display: inline-block;
+        position: absolute;
+        z-index: 20;
+        right: 20px; } }
+  @media (max-width: 980px) {
+    nav div {
+      transition: 0.3s ease;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      -o-transition: 0.3s ease;
+      -ms-transtion: 0.3s ease; } }
+  nav.active span {
+    transform: rotate(45deg);
+    position: fixed; }
+    nav.active span i:before {
+      transform: rotate(90deg);
+      top: 0; }
+    nav.active span i:after {
+      opacity: 0; }
+  nav.active div {
+    transform: translate3d(0, 0, 0) !important; }
+  @media (max-width: 980px) {
+    nav div {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      position: fixed;
+      left: 0;
+      background-color: black;
+      z-index: 15;
+      transform: translate3d(0, -100%, 0) !important; } }
 
 #banner {
   background-image: url("../images/banner.jpg");
@@ -293,7 +350,16 @@ nav {
   padding-left: 0; }
 
 #social li:last-child a {
-  padding-right: 0px; }
+  padding-right: 0; }
+
+@media (max-width: 980px) {
+  #social li {
+    display: inline-block;
+    width: auto; } }
+
+@media (max-width: 980px) {
+  #social {
+    text-align: center; } }
 
 .arrow-down {
   height: 50px;
@@ -480,7 +546,7 @@ nav {
         width: 100%; } }
   #preview li {
     background-color: #11749e;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     width: 340px;
     margin-bottom: 10px; }
     @media (max-width: 767px) {
@@ -534,7 +600,7 @@ nav {
     position: relative;
     bottom: 38px;
     display: inline-block;
-    padding: 20px 35px 0px; }
+    padding: 20px 35px 0; }
     #team figcaption h3 {
       color: #11749e; }
 
@@ -556,7 +622,8 @@ nav {
     padding-left: 15px;
     box-sizing: border-box;
     margin-top: 30px;
-    padding-top: 12px; }
+    padding-top: 12px;
+    color: white; }
     @media (max-width: 767px) {
       #contact textarea {
         margin-top: 0; } }
@@ -566,7 +633,8 @@ nav {
     background-color: transparent;
     border: thin solid white;
     padding-left: 15px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    color: white; }
     #contact input:first-child {
       float: left; }
     #contact input:nth-child(3) {
@@ -582,6 +650,7 @@ nav {
     border: none;
     color: white;
     font-weight: bold;
+    cursor: pointer;
     margin-top: 35px; }
 
 #map {

@@ -16,6 +16,7 @@
             <div></div>
         </div>
         <nav>
+          <div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Pages</a></li>
@@ -30,6 +31,7 @@
                 <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
+          </div>
             <span><i></i></span>
         </nav>
     </header>
@@ -217,10 +219,10 @@
         <section id="contact" class="container">
           <div class="block-title"><span>C</span><i>We’d love to hear about your project.</i></div>
           <form>
-            <input type="text" name="name" placeholder="Name"/>
-            <input type="email" name="email" placeholder="Email"/>
-            <input type="phone" name="phone" placeholder="Phone"/>
-            <textarea placeholder="Message" name="message"></textarea>
+            <input type="text" name="name" placeholder="Name" required="required"/>
+            <input type="email" name="email" placeholder="Email" required="required"/>
+            <input type="tel" name="phone" placeholder="Phone" required="required" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+            <textarea placeholder="Message" name="message" required="required"></textarea>
             <button type="submit">Submit</button>
           </form>
         </section>
