@@ -1,0 +1,63 @@
+@mixin transition($value){
+  transition: $value ease;
+  -webkit-transition:$value ease;
+  -moz-transition: $value ease;
+  -ms-transititon:$value ease;
+}
+@mixin transform($value) {
+  transform: $value;
+  -webkit-transform:$value;
+  -moz-transform:$value;
+  -ms-transform:$value;
+}
+div{
+  background-color: #0b0b0b;
+  padding: 40px 50px;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  animation-name: moveUp;
+  animation-duration: 3s;
+  span,a,button{
+    display: block;
+  }
+  a{
+    text-decoration: none;
+    color:white;
+    margin-bottom: 30px;
+  }
+  span{
+    margin-bottom: 30px;
+  }
+  .btn-main{
+    border:none;
+    padding: 10px 15px;
+    color:white;
+    font-weight: bold;
+    margin: 0 auto 25px;
+    cursor: pointer;
+    &.blue{
+      background-color:#1769ff ;
+    }
+    &.red{
+      background-color: #ea4c89;
+    }
+    &.dark-b{
+      background-color: #0f33ff;
+    }
+  }
+
+  @media(max-width: 980px){
+    padding: 40px 25px;
+    float: none;
+  }
+}
+@keyframes moveUp {
+    from {
+      @include transform(translate3d(0,20px,0));
+    }
+    to {
+      @include transform(translate3d(0,0px,0));
+    }
+}

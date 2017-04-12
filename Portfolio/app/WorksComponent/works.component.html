@@ -1,0 +1,23 @@
+<section *ngIf="works" id="slider">
+    <h2>Selected Work</h2>
+    <button (click)="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+    <div id="slider-holder">
+        <figure id="prev" class="smaller" [@heroState]="state">
+            <span><img src="{{previousWork.src}}" alt="" /></span>
+            <figcaption>{{previousWork.name}}</figcaption>
+        </figure>
+        <figure id="current" [@heroState]="state">
+            <span><img src="{{currentWork.src}}" alt="" /></span>
+            <figcaption>{{currentWork.name}}</figcaption>
+            <p>{{currentWork.description}}</p>
+        </figure>
+        <figure id="next" class="smaller" [@heroState]="state">
+            <span><img src="{{nextWork.src}}" alt="" /></span>
+            <figcaption>{{nextWork.name}}</figcaption>
+        </figure>
+    </div>
+    <button (click)="next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+</section>
+<section id="warning">
+    <h2>We have a lot to offer, but please use a bigger screen size.</h2>
+</section>

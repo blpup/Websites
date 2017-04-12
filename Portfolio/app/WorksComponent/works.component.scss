@@ -1,0 +1,124 @@
+@mixin transition($value){
+  transition: $value ease;
+  -webkit-transition:$value ease;
+  -moz-transition: $value ease;
+  -ms-transititon:$value ease;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 50px;
+}
+
+section {
+    text-align: center;
+}
+
+figure {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    span {
+        width: 335px;
+        height: 335px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: end;
+        @media(max-width:1200px ) {
+            height: 260px;
+            width: 260px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &.smaller {
+        margin-top: 110px;
+
+        span {
+            width: 175px;
+            height: 175px;
+            @media(max-width:1200px ) {
+                height: 100px;
+                width: 100px;
+            }
+        }
+        @media(max-width: 680px) {
+            display: none;
+        }
+    }
+
+    figcaption {
+        font-weight: 400;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+}
+
+#slider {
+    @media(max-width: 440px) {
+        display: none;
+    }
+}
+
+#warning {
+    display: none;
+    @media(max-width: 440px) {
+        display: block;
+    }
+}
+
+#slider-holder {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    text-align: center;
+    @media(max-width: 680px) {
+        width: 70%;
+    }
+}
+
+button {
+    vertical-align: middle;
+    background-color: #282828;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    @include transition(0.3s);
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: #282828;
+        background-color: white;
+    }
+}
+
+#current {
+    figcaption {
+        font-weight: bold;
+        padding: 25px 0;
+        font-size: 18px;
+    }
+}
+
+#next {
+    float: right;
+    margin-right: 10px;
+}
+
+#prev {
+    float: left;
+    margin-left: 10px;
+}

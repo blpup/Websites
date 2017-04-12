@@ -1,0 +1,78 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: #0c0c0c;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+home, contact, hireus, about,work {
+    display: inline-block;
+    width: 82.5vw;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+about {
+    background: url(../imgs/person.png) 90% top no-repeat;
+}
+
+@media(max-width:980px) {
+    home, contact, hireus, about,work {
+        width: 100%;
+        padding: 0 25px;
+    }
+    contact {
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        background-position: 100% top;
+    }
+    to {
+        opacity: 1;
+        background-position: 90% top;
+    }
+}

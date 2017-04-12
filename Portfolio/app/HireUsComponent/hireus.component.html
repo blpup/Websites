@@ -1,0 +1,38 @@
+<section [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <h2>You want us to do</h2>
+    <ul>
+        <li (click)="Activity('appDesign')" [ngClass]='{active:model.appDesign}'><i class="fa fa-check" aria-hidden="true"></i>App Design</li>
+        <li (click)="Activity('graphicDesign')" [ngClass]='{active:model.graphicDesign}'><i class="fa fa-check" aria-hidden="true"></i>Graphic Design</li>
+        <li (click)="Activity('motionDesign')" [ngClass]='{active:model.motionDesign}'><i class="fa fa-check" aria-hidden="true"></i>Motion Design</li>
+    </ul>
+    <ul>
+        <li (click)="Activity('uxDesign')" [ngClass]='{active:model.uxDesign}'><i class="fa fa-check" aria-hidden="true"></i>UX Design</li>
+        <li (click)="Activity('webDesign')" [ngClass]='{active:model.webDesign}'><i class="fa fa-check" aria-hidden="true"></i>Web design</li><br/></ul>
+    <ul>
+        <li (click)="Activity('marketing')" [ngClass]='{active:model.marketing}'><i class="fa fa-check" aria-hidden="true" ></i>Marketing</li>
+    </ul>
+    <div class="input-holder">
+        <div class="input-set l">
+            <input type="text" name="name" required="required" autocomplete="off" placeholder="Name" [(ngModel)]="model.name" #name="ngModel" />
+            <label for="name">name</label>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                Name is required
+            </div>
+        </div>
+        <div class="input-set r">
+            <label>email</label>
+            <input type="email" name="email" required="required" placeholder="Email" autocomplete="off" [(ngModel)]="model.email" #email="ngModel" email/>
+
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                Email is invalid
+            </div>
+        </div>
+    </div>
+
+    <div><button type="submit" [disabled]="!userForm.form.valid">SEND REQUEST</button></div>
+  </form>
+</section>
+<section [hidden]="!submitted">
+    <h2>Thank you! We will get back with you shortly.</h2>
+</section>

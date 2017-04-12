@@ -1,0 +1,44 @@
+<header>
+    <figure>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <figcaption>GLOBAL</figcaption>
+    </figure>
+    <button *ngIf="currentRoute !== '/'" [routerLink]="['/hireus']">Hire Us</button>
+    <nav [ngClass]="{'active':menuOpen}">
+        <div id="menubox" (click)="OpenMenu()">
+            <span></span>
+        </div>
+        <ul>
+            <li [ngClass]="{'active': currentRoute === '/'}"><a [routerLink]="['/home']" (click)="OpenMenu()">Home</a></li>
+            <li [ngClass]="{'active': currentRoute === '/works'}"><a [routerLink]="['/works']" (click)="OpenMenu()">Works</a></li>
+            <li [ngClass]="{'active': currentRoute === '/about'}"><a [routerLink]="['/about']" (click)="OpenMenu()">About</a></li>
+            <li [ngClass]="{'active': currentRoute === '/contact'}"><a [routerLink]="['/contact']" (click)="OpenMenu()">Contact</a></li>
+            <li [ngClass]="{'active': currentRoute === '/hireus'}"><a [routerLink]="['/hireus']" (click)="OpenMenu()">Hire Us</a></li>
+        </ul>
+    </nav>
+</header>
+<main [ngClass]="{'contact': currentRoute === '/contact', 'about': currentRoute === '/about'}">
+    <aside>
+        <nav>
+            <ul>
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+                <li>05</li>
+            </ul>
+            <ul>
+                <li [ngClass]="{'active': currentRoute === '/'}"><a [routerLink]="['/home']">Home</a></li>
+                <li [ngClass]="{'active': currentRoute === '/works'}"><a [routerLink]="['/works']">Works</a></li>
+                <li [ngClass]="{'active': currentRoute === '/about'}"><a [routerLink]="['/about']">About</a></li>
+                <li [ngClass]="{'active': currentRoute === '/contact'}"><a [routerLink]="['/contact']">Contact</a></li>
+                <li [ngClass]="{'active': currentRoute === '/hireus'}"><a [routerLink]="['/hireus']">Hire Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <router-outlet></router-outlet>
+</main>
