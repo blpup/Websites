@@ -1,0 +1,21 @@
+$headColor:#f7f7f7;
+$textColor:#8c8c8c;
+$primaryBlue:#00b0ff;
+$primaryYellow:#f2d800;
+$secondaryBlue:#0022ff;
+
+header{
+  nav{
+    li{
+      display: inline-block;
+      a{
+        display: block;
+        padding: 7px 10px;
+        &:hover{
+          background-color: $primaryBlue;
+          color:white;
+        }
+      }
+    }
+  }
+}

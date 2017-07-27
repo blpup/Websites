@@ -1,0 +1,25 @@
+{
+  "name": "surfersco",
+  "version": "1.0.0",
+  "description": "PSD to HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/blpup/Websites.git"
+  },
+  "author": "Arthur Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blpup/Websites/issues"
+  },
+  "homepage": "https://github.com/blpup/Websites#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  }
+}
