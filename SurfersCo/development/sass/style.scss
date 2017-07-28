@@ -1,19 +1,34 @@
-$headColor:#f7f7f7;
-$textColor:#8c8c8c;
-$primaryBlue:#00b0ff;
-$primaryYellow:#f2d800;
-$secondaryBlue:#0022ff;
+$headColor: #f7f7f7;
+$textColor: #8c8c8c;
+$primaryBlue: #00b0ff;
+$primaryYellow: #f2d800;
+$secondaryBlue: #0022ff;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin transition($seconds) {
+  -webkit-transition: $seconds;
+  -moz-transition: $seconds;
+  -ms-transtion: $seconds;
+  transition: $seconds;
+}
 
-header{
-  nav{
-    li{
+header {
+  nav {
+    li {
       display: inline-block;
-      a{
+
+      a {
         display: block;
         padding: 7px 10px;
-        &:hover{
+
+        &:hover {
           background-color: $primaryBlue;
-          color:white;
+          color: white;
+          @include transition(0.3s);
         }
       }
     }
