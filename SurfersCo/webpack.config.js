@@ -9,6 +9,22 @@ module.exports = {
     rules: [{
       test: /\.css$/,
       use:['style-loader','css-loader']
-    }]
+    },
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    }
+  ],
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  },
+  resolve: {
+    extensions: [ '.js', '.json']
   }
 }
