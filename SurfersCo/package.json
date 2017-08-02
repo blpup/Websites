@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^3.4.1"
   }
 }
